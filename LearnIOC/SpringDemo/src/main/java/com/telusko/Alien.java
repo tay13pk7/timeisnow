@@ -2,7 +2,9 @@ package com.telusko;
 
 public class Alien {
 
-    public int age;
+    private int age;
+
+    private Laptop lap;
 
     public void setAge(int age)
     {
@@ -20,6 +22,19 @@ public class Alien {
     {
         System.out.println("I am coding assholes");
         System.out.println(age);
+        lap.writingLaptop();
     }
+
+    public void setLap(Laptop lap)
+    {
+        this.lap = lap;
+    }
+
+    public Laptop getLap()
+    {
+        return lap;
+    }
+
+
 
 }

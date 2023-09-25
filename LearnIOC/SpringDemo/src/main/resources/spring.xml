@@ -9,7 +9,16 @@
 
     <bean id="alien" class="com.telusko.Alien" scope = "prototype">
      <property name="age" value="10"></property>
+     <property name="lap" ref="lap"></property>
     </bean>
+
+    <bean id ="lap" class = "com.telusko.Laptop">
+
+    </bean>
+
+
+<!--    for using the ref = lap , the bean for its class must be define the xml file-->
+
 
 </beans>
 
