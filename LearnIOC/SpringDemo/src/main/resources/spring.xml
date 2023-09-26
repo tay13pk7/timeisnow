@@ -8,8 +8,9 @@
 <!--    <bean id="alien" class="com.telusko.Alien" scope = "prototype"></bean>-->
 
     <bean id="alien" class="com.telusko.Alien" scope = "prototype">
-     <property name="age" value="10"></property>
-     <property name="lap" ref="lap"></property>
+<!--     <property name="age" value="10"></property>-->
+     <constructor-arg value="12"></constructor-arg>
+     <property name="lap" ref="lap"></property>      <!--this is a setter injection -->
     </bean>
 
     <bean id ="lap" class = "com.telusko.Laptop">
@@ -18,6 +19,7 @@
 
 
 <!--    for using the ref = lap , the bean for its class must be define the xml file-->
+    <!--    there are two injection setter injection and constructor injection showing examples of both here-->
 
 
 </beans>

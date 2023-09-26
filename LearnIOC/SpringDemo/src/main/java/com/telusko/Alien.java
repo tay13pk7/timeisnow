@@ -6,6 +6,10 @@ public class Alien {
 
     private Laptop lap;
 
+    public Alien(int age) {
+        this.age = age;
+    }
+
     public void setAge(int age)
     {
         System.out.println("setter called");
