@@ -2,11 +2,12 @@ package org.telusko;
 
 public class Alien {
     private int age;
-    private Laptop lap;
 
-    public Alien(int age) {
-        this.age = age;
-    }
+    private Computer com;
+
+//    public Alien(int age) {           using this constructor will give error as setter is already use
+//        this.age = age;
+//    }
 
     public void setAge(int age) {
         System.out.println("setter called");
@@ -20,14 +21,14 @@ public class Alien {
     public void code() {
         System.out.println("I am coding assholes");
         System.out.println(this.age);
-        this.lap.writingLaptop();
+        com.writingIn();
     }
 
-    public void setLap(Laptop lap) {
-        this.lap = lap;
+    public void setCom(Computer com) {
+        this.com = com;
     }
 
-    public Laptop getLap() {
-        return this.lap;
+    public Computer getCom() {
+        return com;
     }
 }

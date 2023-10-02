@@ -1,8 +1,8 @@
 package org.telusko;
 
-public class Laptop {
+public class Laptop implements Computer {
 
-    public void writingLaptop()
+    public void writingIn()
     {
         System.out.println("Using a laptop");
     }

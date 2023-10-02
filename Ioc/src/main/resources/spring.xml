@@ -3,46 +3,21 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <!--    <bean id="alien" class="com.telusko.Alien"></bean>-->
 
-    <!--    <bean id="alien" class="com.telusko.Alien" scope = "prototype"></bean>-->
 
-    <bean id="alien" class="org.telusko.Alien" scope = "prototype">
-        <!--     <property name="age" value="10"></property>-->
-        <constructor-arg value="12"></constructor-arg>
-        <property name="lap" ref="lap"></property>      <!--this is a setter injection -->
+    <bean id="alien" class="org.telusko.Alien" scope = "prototype" autowire="byType">
+        <property name="age" value="10"></property>      <!--this is a setter injection -->
+<!--        <property name="com" ref="com"></property>-->
     </bean>
 
-    <bean id ="lap" class = "org.telusko.Laptop">
+    <bean id ="lap" class = "org.telusko.Laptop"  primary="true">
 
     </bean>
 
+    <bean id="com" class="org.telusko.Dekstop" >
 
-    <!--    for using the ref = lap , the bean for its class must be define the xml file-->
-    <!--    there are two injection setter injection and constructor injection showing examples of both here-->
-
+    </bean>
 
 </beans>
 
 
-
-
-
-
-
-
-
-
-
-        <!--<?xml version="1.0" encoding="UTF-8" standalone="no"?>-->
-        <!--<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">-->
-        <!--<properties/>-->
-
-
-        <!--<beans xmlns="http://www.springframework.org/schema/beans"-->
-        <!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
-        <!--       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">-->
-
-        <!--<bean id="alien" class="com.telusko.SpringDemo.Alien"></bean>-->
-
-        <!--</beans>-->
